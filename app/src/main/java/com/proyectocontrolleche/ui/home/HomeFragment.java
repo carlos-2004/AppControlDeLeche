@@ -8,8 +8,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
+import android.widget.CalendarView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.proyectocontrolleche.RegistrarLecheDialogFragment;
 import com.proyectocontrolleche.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -23,6 +28,20 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        // Dentro del método onCreateView, después de obtener la vista raíz
+        CalendarView calendarView = binding.calendarView;
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                // Crear una instancia del diálogo
+                RegistrarLecheDialogFragment dialogFragment = new RegistrarLecheDialogFragment();
+
+                // Mostrar el diálogo
+                FragmentManager fragmentManager = getParentFragmentManager();
+                dialogFragment.show(fragmentManager, "RegistrarLecheDialog");
+            }
+        });
 
 
         return root;
