@@ -5,12 +5,28 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+    <!-- Home Fragment -->
     <fragment
         android:id="@+id/nav_home"
         android:name="com.proyectocontrolleche.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
+    <!-- Leche Mañana -->
+    <fragment
+        android:id="@+id/nav_leche_manana"
+        android:name="com.proyectocontrolleche.ui.leche.LecheMananaFragment"
+        android:label="@string/menu_leche_manana"
+        tools:layout="@layout/fragment_leche_manana" />
+
+    <!-- Leche Tarde -->
+    <fragment
+        android:id="@+id/nav_leche_tarde"
+        android:name="com.proyectocontrolleche.ui.leche.LecheTardeFragment"
+        android:label="@string/menu_leche_tarde"
+        tools:layout="@layout/fragment_leche_tarde" />
+
+    <!-- Otros fragmentos que ya tenías configurados -->
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.proyectocontrolleche.ui.gallery.GalleryFragment"

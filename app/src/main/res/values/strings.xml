@@ -10,4 +10,10 @@
     <string name="menu_home" translatable="false">Registro de Leche</string>
     <string name="menu_gallery" translatable="false">Control y Pago de Leche</string>
     <string name="menu_slideshow" translatable="false">Configuración</string>
+
+
+    <string name="menu_leche_manana">Leche Mañana</string>
+    <string name="menu_leche_tarde">Leche Tarde</string>
+
+
 </resources>
