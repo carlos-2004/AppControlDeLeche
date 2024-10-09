@@ -34,13 +34,7 @@
                 android:id="@+id/btnActualizarProductor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Actualizar Productor de Leche" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/btnEliminarProductor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Registrar Productor de Leche" />
+                android:text="Actualizar o Eliminar Productor de Leche" />
 
             <TextView
                 android:id="@+id/textView6"

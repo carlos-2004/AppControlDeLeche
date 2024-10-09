@@ -33,7 +33,6 @@ public class SlideshowFragment extends Fragment {
         // Encuentra el Chip en el layout
         Chip BtnRegistrarProductor = root.findViewById(R.id.btnRegistrarProductor);
         Chip BtnActualizarProductor = root.findViewById(R.id.btnActualizarProductor);
-        Chip BtnEliminarProductor = root.findViewById(R.id.btnEliminarProductor);
 
         // Configura el OnClickListener para los chips
         BtnRegistrarProductor.setOnClickListener(new View.OnClickListener() {
@@ -54,14 +53,7 @@ public class SlideshowFragment extends Fragment {
             }
         });
 
-        BtnEliminarProductor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Inicia la actividad ActualizarProductor
-                Intent intent = new Intent(getActivity(), ActualizarProductor.class);
-                startActivity(intent);
-            }
-        });
+
 
         return root;
     }
